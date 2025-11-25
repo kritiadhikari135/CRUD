@@ -7,7 +7,7 @@ public class Main {
         String url = "jdbc:postgresql://localhost:5432/Demo";
         String uname = "postgres";
         String pass = "1234";
-        String sql = "update student set s_name ='Max' where s_id =6";
+        String sql = "delete from student where s_id = 7";
 
 
         //Class.forName("org.postgresql.Driver");
