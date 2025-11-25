@@ -7,7 +7,7 @@ public class Main {
         String url = "jdbc:postgresql://localhost:5432/Demo";
         String uname = "postgres";
         String pass = "1234";
-        String sql = "insert into student values (7, 'bunny', 88)";
+        String sql = "update student set s_name ='Max' where s_id =6";
 
 
         //Class.forName("org.postgresql.Driver");
