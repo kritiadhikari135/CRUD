@@ -7,26 +7,14 @@ public class Main {
         String url = "jdbc:postgresql://localhost:5432/Demo";
         String uname = "postgres";
         String pass = "1234";
-        String sql = "select * from student";
+        String sql = "insert into student values (7, 'bunny', 88)";
 
 
         //Class.forName("org.postgresql.Driver");
         Connection con = DriverManager.getConnection(url, uname, pass);
         System.out.println("Connection Established");
         Statement st = con.createStatement();
-        ResultSet rs = st.executeQuery(sql);
-//        rs.next();
-//        String name = rs.getString("s_name");
-//        rs.getString("s_name");
-//        System.out.println(name);
-
-        while(rs.next()){
-            System.out.print(rs.getInt(1) + " ");
-            System.out.print(rs.getString(2) + " ");
-            System.out.println(rs.getInt(3) );
-
-
-        }
+        st.execute(sql);
         con.close();
         System.out.println("Connection closed");
 
